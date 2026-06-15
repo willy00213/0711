@@ -344,66 +344,7 @@
 
             </div>
         </div>
-
-        <!-- 破冰互動：數位九宮格 -->
-        <div class="bg-white rounded-3xl p-6 card-shadow border border-church-100/40 animate-fadeIn" id="bingo-section">
-            <h2 class="text-base font-black text-church-800 flex items-center mb-1">
-                <span class="mr-2 text-lg">🎯</span> 破冰特質大搜查
-            </h2>
-            <p class="text-xs text-slate-400 font-medium mb-4">點擊方格輸入符合特徵的弟兄姊妹名字，集滿連線大喊哈利路亞！</p>
-
-            <!-- 3x3 網格 -->
-            <div class="grid grid-cols-3 gap-2.5">
-                <!-- 九宮格內容：以JS動態生成與控制 -->
-                <div onclick="openBingoModal(0)" id="cell-0" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">穿運動鞋<br>或布鞋</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-0"></span>
-                </div>
-                <div onclick="openBingoModal(1)" id="cell-1" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">今天早上<br>6:30前提早起</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-1"></span>
-                </div>
-                <div onclick="openBingoModal(2)" id="cell-2" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">攜帶實體<br>紙本聖經</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-2"></span>
-                </div>
-
-                <div onclick="openBingoModal(3)" id="cell-3" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">姓名裡有<br>「木」或「艸」</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-3"></span>
-                </div>
-                <!-- 願神祝福 (Center) -->
-                <div onclick="fillCenterCell()" id="cell-4" class="aspect-square bg-gradient-to-br from-accent-500 to-amber-500 text-white rounded-2xl p-2 flex flex-col justify-center items-center text-center cursor-pointer active:scale-95 transition-all shadow-sm ring-4 ring-amber-100/50">
-                    <span class="text-xs font-black tracking-wide">恩典<br>滿滿 ✨</span>
-                    <span class="text-[10px] font-black opacity-90 mt-1" id="name-4">已得恩典</span>
-                </div>
-                <div onclick="openBingoModal(5)" id="cell-5" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">手機電量<br>在 80% 以上</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-5"></span>
-                </div>
-
-                <div onclick="openBingoModal(6)" id="cell-6" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-6"></span>
-                </div>
-                <div onclick="openBingoModal(7)" id="cell-7" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">背出約翰福音<br>三章十六節 📖</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-7"></span>
-                </div>
-                <div onclick="openBingoModal(8)" id="cell-8" class="aspect-square bg-[#fbfbfa] border border-slate-200/60 rounded-2xl p-2 flex flex-col justify-between items-center text-center cursor-pointer hover:bg-church-50 active:scale-95 transition-all">
-                    <span class="text-[10px] text-slate-600 font-bold leading-normal my-auto">與你搭乘<br>「不同車次」</span>
-                    <span class="text-[10px] text-church-700 font-bold hidden bg-white shadow-sm px-1.5 py-1 rounded-full border border-church-100/50 w-full truncate" id="name-8"></span>
-                </div>
-            </div>
-
-            <!-- 清除九宮格進度 -->
-            <div class="mt-4 flex justify-end">
-                <button onclick="resetBingo()" class="text-[11px] text-slate-400 hover:text-rose-600 flex items-center transition-all font-semibold font-bold">
-                    <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                    清除重來
-                </button>
-            </div>
-        </div>
-
+        
         <!-- 行前必備行李打包清單 Card -->
         <div class="bg-white rounded-3xl p-6 card-shadow border border-church-100/40">
             <h2 class="text-base font-black text-church-800 flex items-center mb-1">
@@ -418,7 +359,7 @@
                 </label>
                 <label class="flex items-center space-x-3 p-3 rounded-2xl border border-slate-100/80 hover:bg-slate-50 transition-all cursor-pointer">
                     <input type="checkbox" onchange="toggleCheck(this)" class="w-4 h-4 rounded text-church-600 focus:ring-church-500 border-slate-300">
-                    <span class="text-xs text-slate-600 font-bold">遮陽防曬用具或摺疊傘（宜蘭必備）☂️</span>
+                    <span class="text-xs text-slate-600 font-bold">輕便雨衣或摺疊傘（宜蘭必備）☂️</span>
                 </label>
                 <label class="flex items-center space-x-3 p-3 rounded-2xl border border-slate-100/80 hover:bg-slate-50 transition-all cursor-pointer">
                     <input type="checkbox" onchange="toggleCheck(this)" class="w-4 h-4 rounded text-church-600 focus:ring-church-500 border-slate-300">
@@ -426,7 +367,7 @@
                 </label>
                 <label class="flex items-center space-x-3 p-3 rounded-2xl border border-slate-100/80 hover:bg-slate-50 transition-all cursor-pointer">
                     <input type="checkbox" onchange="toggleCheck(this)" class="w-4 h-4 rounded text-church-600 focus:ring-church-500 border-slate-300">
-                    <span class="text-xs text-slate-600 font-bold">個人常用藥品與隨身環保保溫瓶 💊</span>
+                    <span class="text-xs text-slate-600 font-bold">個人常用藥品與隨身環保瓶 💊</span>
                 </label>
                 <label class="flex items-center space-x-3 p-3 rounded-2xl border border-slate-100/80 hover:bg-slate-50 transition-all cursor-pointer">
                     <input type="checkbox" onchange="toggleCheck(this)" class="w-4 h-4 rounded text-church-600 focus:ring-church-500 border-slate-300">
